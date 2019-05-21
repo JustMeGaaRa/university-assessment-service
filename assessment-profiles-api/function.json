@@ -1,0 +1,39 @@
+{
+  "bindings": [
+    {
+      "authLevel": "anonymous",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "get",
+        "post",
+        "delete"
+      ],
+      "route": "assessment-profiles"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "type": "cosmosDB",
+      "name": "documents",
+      "databaseName": "university-assessments-database",
+      "collectionName": "assessment-profiles",
+      "connectionStringSetting": "university-assessment-cosmosdb_DOCUMENTDB",
+      "direction": "in"
+    },
+    {
+      "type": "cosmosDB",
+      "name": "assessmentProfile",
+      "databaseName": "university-assessments-database",
+      "collectionName": "assessment-profiles",
+      "createIfNotExists": true,
+      "connectionStringSetting": "university-assessment-cosmosdb_DOCUMENTDB",
+      "direction": "out"
+    }
+  ],
+  "scriptFile": "../dist/assessment-profiles-api/index.js"
+}

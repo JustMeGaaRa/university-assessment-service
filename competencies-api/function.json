@@ -1,0 +1,39 @@
+{
+  "bindings": [
+    {
+      "authLevel": "anonymous",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "get",
+        "post",
+        "delete"
+      ],
+      "route": "competencies"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "type": "cosmosDB",
+      "name": "documents",
+      "databaseName": "university-assessments-database",
+      "collectionName": "competencies",
+      "connectionStringSetting": "university-assessment-cosmosdb_DOCUMENTDB",
+      "direction": "in"
+    },
+    {
+      "type": "cosmosDB",
+      "name": "competency",
+      "databaseName": "university-assessments-database",
+      "collectionName": "competencies",
+      "createIfNotExists": true,
+      "connectionStringSetting": "university-assessment-cosmosdb_DOCUMENTDB",
+      "direction": "out"
+    }
+  ],
+  "scriptFile": "../dist/competencies-api/index.js"
+}
