@@ -8,9 +8,10 @@
       "methods": [
         "get",
         "post",
+        "put",
         "delete"
       ],
-      "route": "competencies"
+      "route": "competencies/{id?}"
     },
     {
       "type": "http",
@@ -19,7 +20,7 @@
     },
     {
       "type": "cosmosDB",
-      "name": "documents",
+      "name": "competencies",
       "databaseName": "university-assessments-database",
       "collectionName": "competencies",
       "connectionStringSetting": "university-assessment-cosmosdb_DOCUMENTDB",

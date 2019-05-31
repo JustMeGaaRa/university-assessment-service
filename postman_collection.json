@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "806f727b-1454-4146-ac16-3be570c90d0d",
+		"name": "university assessment api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "competencies",
+			"item": [
+				{
+					"name": "http://localhost:7071/api/competencies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7071/api/competencies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7071",
+							"path": [
+								"api",
+								"competencies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:7071/api/competencies",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Teamwork\",\n    \"description\": \"string\",\n    \"subcompetencies\": [\n    \t{\n\t        \"subcompetencyId\": 1,\n\t        \"name\": \"Performance working with team\",\n\t        \"indicators\": []\n\t    },\n\t    {\n\t        \"subcompetencyId\": 2,\n\t        \"name\": \"Working with expectations\",\n\t        \"indicators\": []\n\t    }\n\t]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:7071/api/competencies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7071",
+							"path": [
+								"api",
+								"competencies"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "assessment profiles",
+			"item": [
+				{
+					"name": "http://localhost:7071/api/assessment-profiles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7071/api/assessment-profiles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7071",
+							"path": [
+								"api",
+								"assessment-profiles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:7071/api/assessment-profiles",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Senior Software Enginner\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:7071/api/assessment-profiles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7071",
+							"path": [
+								"api",
+								"assessment-profiles"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

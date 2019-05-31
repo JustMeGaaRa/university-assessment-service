@@ -8,10 +8,9 @@
       "methods": [
         "get",
         "post",
-        "put",
         "delete"
       ],
-      "route": "assessment-profiles/{id?}"
+      "route": "assessments/{id?}"
     },
     {
       "type": "http",
@@ -20,29 +19,21 @@
     },
     {
       "type": "cosmosDB",
-      "name": "assessmentProfiles",
+      "name": "assessments",
       "databaseName": "university-assessments-database",
-      "collectionName": "assessment-profiles",
+      "collectionName": "assessments",
       "connectionStringSetting": "university-assessment-cosmosdb_DOCUMENTDB",
       "direction": "in"
     },
     {
       "type": "cosmosDB",
-      "name": "competencies",
+      "name": "assessment",
       "databaseName": "university-assessments-database",
-      "collectionName": "competencies",
-      "connectionStringSetting": "university-assessment-cosmosdb_DOCUMENTDB",
-      "direction": "in"
-    },
-    {
-      "type": "cosmosDB",
-      "name": "assessmentProfile",
-      "databaseName": "university-assessments-database",
-      "collectionName": "assessment-profiles",
+      "collectionName": "assessments",
       "createIfNotExists": true,
       "connectionStringSetting": "university-assessment-cosmosdb_DOCUMENTDB",
       "direction": "out"
     }
   ],
-  "scriptFile": "../dist/assessment-profiles-api/index.js"
+  "scriptFile": "../dist/assessments-api/index.js"
 }
